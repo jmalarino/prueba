@@ -1,6 +1,6 @@
 # AWS - TERRAFORM
 
-El codigo cuenta con diferentes archivos que se encargan de la generacion de los diferentes recursos.
+El codigo cuenta con diferentes archivos .tf que se encargan de la generacion de los diferentes recursos.
 
 El objetivo final del mismo es la creacion de una vpc con dos subredes (una publica y una privada), en cada una de esas subredes debemos poner una instancia de EC2, la instancia que este en la subred publica debe ser accesible por SSH desde nuestra maquina local y la que se encuentre en la red privada debe ser accesible desde la instancia EC2 que esta en la red publica tambien por SSH.
 
