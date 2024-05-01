@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "bucket-publico-jmalarino" {
     acl    = "private"
 }
 
-# Política de acceso para el bucket privado
+# Política de acceso para el bucket publico
 resource "aws_s3_bucket_policy" "bucket_publico_policy" {
   bucket = aws_s3_bucket.bucket-publico-jmalarino.id
 
