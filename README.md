@@ -26,14 +26,20 @@ Defino la utilizacion de las llaves para cada instancia (en este caso la llave l
 
 Luego creo el security group que oficia como firewall para el acceso al puerto SSH (TCP 22) y permito el protocolo ICMP para poder hacer ping. Lo asigno a la instancia publica (de todos modos hay que revisar el codigo porque la asignacion no esta funcionando y lo resolvi haciendo la asignacion manual del security group por entorno grafico haciendo clic en cada instancia, seguridad y cambiar grupos de seguridad).
 
-s3.tf: En este archivo genero los buckets publico y privado y les asocio politicas que permiten todas las acciones sobre ellos y asocio ambos recursos para permitir que compartan archivos entre ellos.
+*s3.tf*: En este archivo genero los buckets publico y privado y les asocio politicas que permiten todas las acciones sobre ellos y asocio ambos recursos para permitir que compartan archivos entre ellos.
 
-ecr.tf: Aqui creo la registry que servira para alojar y administrar mis imagenes dockerizadas y le asocio la politica con los permisos requeridos para poder llevar adelante las acciones de 	administracion de las mismas.
+*ecr.tf*: Aqui creo la registry que servira para alojar y administrar mis imagenes dockerizadas y le asocio la politica con los permisos requeridos para poder llevar adelante las acciones de 	administracion de las mismas.
 
-GetDownloadUrlForLayer: Obtiene una URL de descarga para una capa específica de una imagen en un repositorio de ECR.
-BatchGetImage: Obtiene información sobre varias imágenes almacenadas en un repositorio de ECR, como sus metadatos y detalles de la capa.
-BatchCheckLayerAvailability: Comprueba la disponibilidad de múltiples capas de imagen en un repositorio de ECR.
-PutImage: Almacena una imagen en un repositorio de ECR. Esto implica cargar la imagen y sus capas asociadas al repositorio.
-InitiateLayerUpload: Inicia la subida de una nueva capa de imagen al repositorio de ECR.
-UploadLayerPart: Sube partes de una capa de imagen al repositorio de ECR durante un proceso de carga.
-CompleteLayerUpload: Finaliza el proceso de carga de una capa de imagen al repositorio de ECR después de que todas las partes hayan sido subidas.
+*GetDownloadUrlForLayer*: Obtiene una URL de descarga para una capa específica de una imagen en un repositorio de ECR.
+
+*BatchGetImage*: Obtiene información sobre varias imágenes almacenadas en un repositorio de ECR, como sus metadatos y detalles de la capa.
+
+*BatchCheckLayerAvailability*: Comprueba la disponibilidad de múltiples capas de imagen en un repositorio de ECR.
+
+*PutImage*: Almacena una imagen en un repositorio de ECR. Esto implica cargar la imagen y sus capas asociadas al repositorio.
+
+*InitiateLayerUpload*: Inicia la subida de una nueva capa de imagen al repositorio de ECR.
+
+*UploadLayerPart*: Sube partes de una capa de imagen al repositorio de ECR durante un proceso de carga.
+
+*CompleteLayerUpload*: Finaliza el proceso de carga de una capa de imagen al repositorio de ECR después de que todas las partes hayan sido subidas.
